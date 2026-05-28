@@ -1,0 +1,29 @@
+{
+  "name": "grove",
+  "version": "0.1.0",
+  "description": "Connect Codex to a Grove firm. Read returns, fact sheets, document checklists; import Drake and Lacerte backups end-to-end.",
+  "author": { "name": "Grove" },
+  "homepage": "https://www.grove.tax",
+  "repository": "https://github.com/grove-tax/grove-mcp",
+  "license": "MIT",
+  "keywords": ["tax", "drake", "lacerte", "mcp", "grove"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Grove",
+    "shortDescription": "Your firm's tax returns, from your editor",
+    "longDescription": "Grove connects Codex to your firm in Grove. Once installed, ask Codex to list authorized returns, summarize a client's fact sheet, generate a 'still missing these documents' email, or import a Drake / Lacerte backup from your machine. All requests run against your firm via OAuth — no API keys to paste.",
+    "developerName": "Grove",
+    "category": "productivity",
+    "capabilities": ["mcp", "skills"],
+    "websiteURL": "https://www.grove.tax",
+    "composerIcon": "./assets/grove-logo.svg",
+    "logo": "./assets/grove-logo.svg",
+    "defaultPrompt": [
+      "List my open returns in Grove.",
+      "What documents is my client still missing?",
+      "Import a Drake or Lacerte backup into Grove.",
+      "Draft a 'still missing documents' email for a client."
+    ]
+  }
+}

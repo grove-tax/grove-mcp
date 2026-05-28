@@ -1,0 +1,21 @@
+{
+  "name": "grove",
+  "owner": {
+    "name": "Grove",
+    "email": "support@grove.tax"
+  },
+  "description": "Grove's AI plugin marketplace — connect Claude Code to your tax firm through OAuth.",
+  "plugins": [
+    {
+      "name": "grove",
+      "displayName": "Grove",
+      "source": "./plugins/grove",
+      "description": "Connect Claude Code to your firm in Grove. List authorized returns, summarize MCP-exposed fact-sheet fields, and import Drake / Lacerte backups end-to-end.",
+      "homepage": "https://www.grove.tax",
+      "repository": "https://github.com/grove-tax/grove-mcp",
+      "license": "MIT",
+      "keywords": ["tax", "drake", "lacerte", "mcp", "grove", "oauth"],
+      "category": "External integrations"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "grove",
+  "interface": {
+    "displayName": "Grove"
+  },
+  "plugins": [
+    {
+      "name": "grove",
+      "displayName": "Grove",
+      "source": {
+        "source": "local",
+        "path": "./plugins/grove"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity",
+      "description": "Connect Codex to your firm in Grove. List authorized returns, summarize MCP-exposed fact-sheet fields, and import Drake / Lacerte backups end-to-end via OAuth.",
+      "icon": "./plugins/grove/assets/grove-logo.svg"
+    }
+  ]
+}

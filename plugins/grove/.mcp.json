@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "grove": {
+      "type": "http",
+      "url": "https://app.grove.tax/api/mcp"
+    }
+  }
+}

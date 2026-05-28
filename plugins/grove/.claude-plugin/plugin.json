@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "grove",
+  "displayName": "Grove",
+  "version": "0.1.0",
+  "description": "Connect Claude Code to your firm in Grove. List authorized returns, summarize MCP-exposed fact-sheet fields, and import Drake / Lacerte backups end-to-end — all via OAuth.",
+  "author": {
+    "name": "Grove",
+    "email": "support@grove.tax",
+    "url": "https://www.grove.tax"
+  },
+  "homepage": "https://www.grove.tax",
+  "repository": "https://github.com/grove-tax/grove-mcp",
+  "license": "MIT",
+  "keywords": ["tax", "drake", "lacerte", "mcp", "grove", "oauth", "anthropic"]
+}
