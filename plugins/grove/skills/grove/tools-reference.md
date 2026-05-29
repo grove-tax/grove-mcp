@@ -110,7 +110,7 @@ Starts the import job. Blocks for up to ~4.5 minutes; most imports finish in thi
 
 ## `get_import_status`
 
-Follow-up to `upload_return` when it returned `status: 'processing'`. Same response shape as `upload_return`, same ~4.5min polling window — keep calling until you get a terminal status.
+Follow-up to `upload_return` when it returned `status: 'processing'`. Same response shape as `upload_return`, same ~4.5min polling window — call again until you get a terminal status, up to a sensible cap (see Pattern below).
 
 **Args**:
 - `job_id` — the `jobId` from the prior `upload_return` response. Required.
@@ -119,4 +119,4 @@ Follow-up to `upload_return` when it returned `status: 'processing'`. Same respo
 
 **When to use**: only after an `upload_return` (or earlier `get_import_status`) returned `status: 'processing'` with a `jobId`. **Don't** call this speculatively or without a `jobId` you obtained from a prior tool call.
 
-**Pattern**: when an import is taking a while, narrate progress to the preparer between calls — *"still importing; checking again in a moment…"* — so they don't think you're stuck. Each call can wait up to ~4.5 minutes; one or two follow-ups handles almost any real import.
+**Pattern**: when an import is taking a while, narrate progress to the preparer between calls — *"still importing; checking again in a moment…"* — so they don't think you're stuck. Each call can wait up to ~4.5 minutes; one or two follow-ups handles almost any real import. **Cap it**: if it's still `processing` after 3-4 follow-ups (~15-20 min total), stop calling and tell the preparer the import looks stuck and to check the import-jobs page in Grove. Don't poll indefinitely — a crashed background job will return `processing` forever.
